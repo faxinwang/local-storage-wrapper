@@ -1,5 +1,5 @@
 {
-  "name": "local-storage-mapper",
+  "name": "@faxinw/local-storage-wrapper",
   "version": "1.0.0",
   "description": "Saving object to localStorage automatically with typescript support",
   "main": "./dist/index.js",
@@ -19,6 +19,9 @@
     "test": "serve ./test"
   },
   "dependencies": {
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "devDependencies": {
     "@babel/core": "^7.11.5",

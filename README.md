@@ -15,7 +15,7 @@ Supports:
 1. [x] any other storage that implements getItem() and setItem()
 1. [x] debounce save to improve performance, default to dealy 100ms
 
-## 安装
+## install
 
 yarn
 > yarn add local-storage-wrapper
@@ -23,10 +23,10 @@ yarn
 npm
 > npm install local-storage-wrapper -S
 
-## 使用
+## usage
 
 ```typescript
-import LocalStorageMapper from 'local-storage-wrapper'
+import LocalStorageWrapper from 'local-storage-wrapper'
 
 function assert(a: any, b: any, msg: string=""){
     if(a === b){
@@ -43,7 +43,8 @@ class User{
     gender: '男' | '女' = '男'
 }
 
-let user: User = LocalStorageMapper(User, {debounceSaveDelay:1000})
+// the type `User` here is to tell `LocalStorageWrapper` that the return type is `User`
+let user: User = LocalStorageWrapper(User, {debounceSaveDelay:1000})
 
 // will fail after the first run if value has changed.
 assert(user.name,'zhangsan')
@@ -67,7 +68,7 @@ class MyState{
     }
 }
 
-let mystate:MyState = LocalStorageMapper(MyState)
+let mystate:MyState = LocalStorageWrapper(MyState)
 
 mystate.id = "0123"
 mystate.arr.push(1)

@@ -1,7 +1,7 @@
 # local-storage-wrapper
 
-[![NPM Version](https://img.shields.io/npm/v/local-storage-wrapper.svg?style=flat)](https://www.npmjs.com/package/local-storage-wrapper)
-[![](https://img.shields.io/npm/dt/local-storage-wrapper.svg)](https://www.npmjs.com/package/local-storage-wrapper)
+[![NPM Version](https://img.shields.io/npm/v/@faxinw/local-storage-wrapper.svg?style=flat)](https://www.npmjs.com/package/@faxinw/local-storage-wrapper)
+[![](https://img.shields.io/npm/dt/@faxinw/local-storage-wrapper.svg)](https://www.npmjs.com/package/@faxinw/local-storage-wrapper)
 
 Saving objects to localStorage or sessionStorage automatically as it changes. 
 
@@ -18,15 +18,15 @@ Supports:
 ## install
 
 yarn
-> yarn add local-storage-wrapper
+> yarn add @faxinw/local-storage-wrapper
 
 npm
-> npm install local-storage-wrapper -S
+> npm install @faxinw/local-storage-wrapper -S
 
 ## usage
 
 ```typescript
-import LocalStorageWrapper from 'local-storage-wrapper'
+import LocalStorageWrapper from '@faxinw/local-storage-wrapper'
 
 function assert(a: any, b: any, msg: string=""){
     if(a === b){

@@ -1,0 +1,6 @@
+.vscode
+.github
+.git
+node_modules
+src
+test

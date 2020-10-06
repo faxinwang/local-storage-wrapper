@@ -45,13 +45,20 @@ let mystate:MyState = LocalStorageWrapper(MyState)
 // let mystate:MyState = LocalStorageWrapper(MyState,{storage: sessionStorage})
 
 mystate.id = "0123"
-mystate.arr.push(1)
+mystate.arr.push(2)
 mystate.name = {firstName: "bajie", lastName:"zhu"}
 
 assert(mystate.id, '0123')
 // will fail after the first run.
 assert(mystate.arr.length, 1)
-assert(mystate.arr[0], 1)
+assert(mystate.arr[0], 2)
 assert(mystate.name.lastName, 'zhu')
+
+// in this way, the proxy can not detect the state change, 
+// so the state change may not be presisted once the debounce time has passed.
+let arr = mystate.arr
+setTimeout(()=>{
+    arr.push(3)
+})
 
 

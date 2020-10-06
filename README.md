@@ -80,4 +80,11 @@ assert(mystate.arr.length, 1)
 assert(mystate.arr[0], 1)
 assert(mystate.name.lastName, 'zhu')
 
+// in this way, the proxy can not detect the state change, 
+// so the state change may not be presisted once the debounce time has passed.
+let arr = mystate.arr
+setTimeout(()=>{
+    arr.push(3)
+})
+
 ```

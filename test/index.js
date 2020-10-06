@@ -50,7 +50,7 @@ function defineProxy(target, handler) {
     });
     return new Proxy(target, handler);
 }
-export default function LocalStorageWrapper(Class, opt = {}) {
+function LocalStorageWrapper(Class, opt = {}) {
     let name = Class.name;
     let storage = opt.storage || localStorage;
     if (_proxy_pool[name]) {
@@ -64,4 +64,4 @@ export default function LocalStorageWrapper(Class, opt = {}) {
     _proxy_pool[name] = defineProxy(state, new Handler(opt.debounceSaveDelay, storage));
     return _proxy_pool[name];
 }
-export { LocalStorageWrapper };
+// export { LocalStorageWrapper };
